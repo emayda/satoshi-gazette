@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
@@ -17,18 +19,18 @@ export default function Home() {
           </div>
 
           <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
-            <a href="#" className="hover:text-white">
+            <Link href="/wire" className="hover:text-white">
               Wire
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/briefings" className="hover:text-white">
               Briefings
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/mining" className="hover:text-white">
               Mining Desk
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/about" className="hover:text-white">
               About
-            </a>
+            </Link>
           </nav>
         </header>
 
@@ -52,7 +54,6 @@ export default function Home() {
             </div>
 
             {/* Fake email capture for now */}
-                        {/* Fake email capture for now */}
             <div className="space-y-2">
               <form className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <input
@@ -71,7 +72,6 @@ export default function Home() {
                 3× weekly briefing. Bitcoin-only. No trading spam.
               </p>
             </div>
-
           </div>
 
           {/* Right column placeholder */}
@@ -110,9 +110,7 @@ export default function Home() {
         <section className="grid gap-6 md:grid-cols-3">
           {/* Wire */}
           <div className="space-y-3 rounded-xl border border-slate-800 bg-slate-900/40 p-4">
-            <h2 className="text-sm font-semibold text-slate-100">
-              The Wire
-            </h2>
+            <h2 className="text-sm font-semibold text-slate-100">The Wire</h2>
             <p className="text-xs text-slate-400">
               Fast, Bitcoin-only hits in plain language.
             </p>
@@ -121,9 +119,12 @@ export default function Home() {
               <li>• Public miner adds 3 EH/s with new hydro deployment.</li>
               <li>• Major exchange moves 10k+ BTC to cold storage.</li>
             </ul>
-            <button className="mt-2 text-xs font-medium text-orange-400 hover:text-orange-300">
+            <Link
+              href="/wire"
+              className="mt-2 inline-block text-xs font-medium text-orange-400 hover:text-orange-300"
+            >
               View full Wire →
-            </button>
+            </Link>
           </div>
 
           {/* Briefings */}
@@ -147,9 +148,12 @@ export default function Home() {
                 are found.
               </div>
             </div>
-            <button className="mt-2 text-xs font-medium text-orange-400 hover:text-orange-300">
+            <Link
+              href="/briefings"
+              className="mt-2 inline-block text-xs font-medium text-orange-400 hover:text-orange-300"
+            >
               Read all Briefings →
-            </button>
+            </Link>
           </div>
 
           {/* Mining Desk */}
@@ -161,13 +165,18 @@ export default function Home() {
               Weekly deep dives on ASICs, energy markets, hosting, and policy.
             </p>
             <ul className="space-y-2 text-xs text-slate-300">
-              <li>• Immersion vs air-cooled: where the economics actually win.</li>
+              <li>
+                • Immersion vs air-cooled: where the economics actually win.
+              </li>
               <li>• Case study: a national utility’s Bitcoin mining pilot.</li>
               <li>• Post-2028: what “home mining” realistically looks like.</li>
             </ul>
-            <button className="mt-2 text-xs font-medium text-orange-400 hover:text-orange-300">
+            <Link
+              href="/mining"
+              className="mt-2 inline-block text-xs font-medium text-orange-400 hover:text-orange-300"
+            >
               Explore the Mining Desk →
-            </button>
+            </Link>
           </div>
         </section>
       </div>
