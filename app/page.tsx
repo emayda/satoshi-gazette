@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 
 export default function Home() {
   return (
@@ -6,17 +7,7 @@ export default function Home() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-10 md:py-16">
         {/* Top nav */}
         <header className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="h-8 w-8 rounded-full bg-orange-500/90" />
-            <div>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
-                Satoshi Gazette
-              </div>
-              <p className="text-xs text-slate-500">
-                Bitcoin-only publication
-              </p>
-            </div>
-          </div>
+          <Logo />
 
           <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
             <Link href="/wire" className="hover:text-white">
